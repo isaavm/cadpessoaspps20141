@@ -1,0 +1,227 @@
+<regras>
+	<registro>
+		<ddd>21 22 23 24 25 26</ddd>
+		<banda>71 95</banda>
+		<operadora>Vivo</operadora>
+	</registro>
+	<registro>
+		<ddd>21 22 23 24 25 26</ddd>
+		<banda>84 85 89</banda>
+		<operadora>Oi</operadora>
+	</registro>
+	<registro>
+		<ddd>21 22 23 24 25 26</ddd>
+		<banda>74 75 76</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>21 22 23 24 25 26 27 28</ddd>
+		<banda>96 97 98 99</banda>
+		<operadora>Vivo</operadora>
+	</registro>
+	<registro>
+		<ddd>21 22 23 24 25 26 27 28</ddd>
+		<banda>91 92 93 94</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>21 22 23 24 25 26 27 28</ddd>
+		<banda>86 87 88</banda>
+		<operadora>Oi</operadora>
+	</registro>
+	<registro>
+		<ddd>21 22 23 24 25 26 27 28</ddd>
+		<banda>80 81 82 83</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>91 92 93 94 95 96 97 98 99</ddd>
+		<banda>84</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>91 92 93 94 95 96 97 98 99</ddd>
+		<banda>96 97 98 99</banda>
+		<operadora>Amazônia Celular</operadora>
+	</registro>
+	<registro>
+		<ddd>91 92 93 94 95 96 97 98 99</ddd>
+		<banda>91 92 93 94</banda>
+		<operadora>Vivo</operadora>
+	</registro>
+	<registro>
+		<ddd>91 92 93 94 95 96 97 98 99</ddd>
+		<banda>86 87 88</banda>
+		<operadora>Oi</operadora>
+	</registro>
+	<registro>
+		<ddd>91 92 93 94 95 96 97 98 99</ddd>
+		<banda>80 81 82 83</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>31 32 33 34 35 36 37 38</ddd>
+		<banda>96 97 98 99</banda>
+		<operadora>Telemig Celular</operadora>
+	</registro>
+	<registro>
+		<ddd>31 32 33 34 35 36 37 38</ddd>
+		<banda>85 89</banda>
+		<operadora>Oi</operadora>
+	</registro>
+	<registro>
+		<ddd>31 32 33 34 35 36 37 38</ddd>
+		<banda>91 92 93 94</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>31 32 33 34 35 36 37 38</ddd>
+		<banda>86 87 88</banda>
+		<operadora>Oi</operadora>
+	</registro>
+	<registro>
+		<ddd>31 32 33 34 35 36 37 38</ddd>
+		<banda>82 83 84</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>71 72 73 74 75 76 77 78 79</ddd>
+		<banda>96 97 98 99</banda>
+		<operadora>Vivo</operadora>
+	</registro>
+	<registro>
+		<ddd>71 72 73 74 75 76 77 78 79</ddd>
+		<banda>91 92 93 94</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>71 72 73 74 75 76 77 78 79</ddd>
+		<banda>86 87 88</banda>
+		<operadora>Oi</operadora>
+	</registro>
+	<registro>
+		<ddd>71 72 73 74 75 76 77 78 79</ddd>
+		<banda>81 82</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>81 82 83 84 85 86 87 88 89</ddd>
+		<banda>88 96 97 98 99</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>81 82 83 84 85 86 87 88 89</ddd>
+		<banda>91 92 93 94</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>81 82 83 84 85 86 87 88 89</ddd>
+		<banda>85 86 87 88</banda>
+		<operadora>Oi</operadora>
+	</registro>
+	<registro>
+		<ddd>81 82 83 84 85 86 87 88 89</ddd>
+		<banda>80 81 82 83 84 85 89</banda>
+		<operadora>Vivo</operadora>
+	</registro>
+	<registro>
+		<ddd>41 42 43 44 45 46 47 48 49</ddd>
+		<banda>96 97 98 99</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>41 42 43 44 45 46 47 48 49</ddd>
+		<banda>91 92 93 94</banda>
+		<operadora>Vivo</operadora>
+	</registro>
+	<registro>
+		<ddd>41 42 43 44 45 46 47 48 49</ddd>
+		<banda>87 88</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>41 42 43 44 45 46 47 48 49</ddd>
+		<banda>84 85</banda>
+		<operadora>Brasil Telecom</operadora>
+	</registro>	
+	<registro>
+		<ddd>51 52 53 54 55</ddd>
+		<banda>96 97 98 99</banda>
+		<operadora>Vivo</operadora>
+	</registro>
+	<registro>
+		<ddd>51 52 53 54 55</ddd>
+		<banda>91 92 93 94</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>51 52 53 54 55</ddd>
+		<banda>81 82</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>51 52 53 54 55</ddd>
+		<banda>84 85</banda>
+		<operadora>Brasil Telecom</operadora>
+	</registro>
+	<registro>
+		<ddd>61 62 63 64 65 66 67 68 69</ddd>
+		<banda>96 97 98 99</banda>
+		<operadora>Vivo</operadora>
+	</registro>
+	<registro>
+		<ddd>61 62 63 64 65 66 67 68 69</ddd>
+		<banda>91 92 93 94</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>61 62 63 64 65 66 67 68 69</ddd>
+		<banda>81 82</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>61 62 63 64 65 66 67 68 69</ddd>
+		<banda>84 85</banda>
+		<operadora>Brasil Telecom</operadora>
+	</registro>
+	<registro>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<banda>96 97 98 99 71 72 73 74 75 95</banda>
+		<operadora>Vivo</operadora>
+	</registro>
+	<registro>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<banda>91 92 93 94 76</banda>
+		<operadora>Claro</operadora>
+	</registro>
+	<registro>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<banda>81 82 83 84 85 86 87</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<banda>80 65</banda>
+		<operadora>Oi</operadora>
+	</registro>
+	<registro>
+		<ddd>88 89 80</ddd>
+		<banda>84 85</banda>
+		<operadora>Oi</operadora>
+	</registro>
+	<registro>
+		<ddd>43</ddd>
+		<banda>81</banda>
+		<operadora>Tim</operadora>
+	</registro>
+	<registro>
+		<ddd>61 62 63 64 65 66 67 68 69</ddd>
+		<banda>86</banda>
+		<operadora>BrT</operadora>
+	</registro>
+	<registro>
+		<ddd>31 32 33 34 35 36 37 38</ddd>
+		<banda>96</banda>
+		<operadora>CTBR</operadora>
+	</registro>
+</regras>

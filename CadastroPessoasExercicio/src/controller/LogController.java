@@ -23,9 +23,9 @@ import view.ConfigLogView;
  */
 public class LogController {
 
-    ILog log;
-    ConfigLogView view;
-    LogDAO dao;
+    private ILog log;
+    private ConfigLogView view;
+    private LogDAO dao;
 
     public LogController() throws SQLException, ClassNotFoundException {
         dao = new LogDAO();
@@ -58,6 +58,7 @@ public class LogController {
         try {
             dao.trocarLog(fil);
             defineLog();
+            view.dispose();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(view, ex.getMessage());
             Logger.getLogger(LogController.class.getName()).log(Level.SEVERE, null, ex);

@@ -18,6 +18,7 @@ import persistence.xml.ExportarContatosXML;
 import persistence.xml.ImportarContatosXML;
 import pessoas.controller.InclusaoPessoaController;
 import pessoas.controller.ListaPessoasController;
+import pessoas.controller.ListaPessoasIncompletasController;
 import usuario.controller.InclusaoUsuarioController;
 import usuario.controller.ListagemUsuarioController;
 import view.MainView;
@@ -50,11 +51,11 @@ public class PrincipalController {
                 listar();
             }
         });
-        view.getMenuSair().addActionListener(new ActionListener() {
+        view.getMenuContatoIncompleto().addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                sair();
+                listaContatosIncompletos();
             }
         });
         view.getMenuImportar().addActionListener(new ActionListener() {
@@ -78,21 +79,30 @@ public class PrincipalController {
                 mudarLog();
             }
         });
-        if(!this.user.isAdm()){
+        view.getMenuContatoIncompleto().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                listaIncompletos();
+            }
+        });
+        if (!this.user.isAdm()) {
             view.getSuperMenuUsuario().setEnabled(false);
             view.getSuperMenuUsuario().setVisible(false);
-        }else{
+        } else {
             view.getMenuAddUser().addActionListener(new ActionListener() {
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-addUser();                }
+                    addUser();
+                }
             });
             view.getMenuListaUser().addActionListener(new ActionListener() {
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-listaUser();                }
+                    listaUser();
+                }
             });
         }
         view.setVisible(true);
@@ -101,34 +111,38 @@ listaUser();                }
     private void mudarLog() {
         this.log.exibirConfiguracoes();
     }
-    
-    private void addUser(){
+
+    private void addUser() {
         new InclusaoUsuarioController(null);
     }
-    
-    private void listaUser(){
-        new ListagemUsuarioController();
+private void listaIncompletos(){
+    new ListaPessoasIncompletasController(log.getLog(), user);
+}
+    private void listaContatosIncompletos() {
+        new ListaPessoasIncompletasController(log.getLog(), user);
     }
 
-    private void sair() {
-        view.dispose();
-        try {
-            finalize();
-            
-        } catch (Throwable ex) {
-            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    private void listaUser() {
+        new ListagemUsuarioController();
     }
 
     private void importarXml() {
         try {
-            ImportarContatosXML im = new ImportarContatosXML(view);
+            ImportarContatosXML im = new ImportarContatosXML(view,log.getLog(),user);
             log.getLog().msgImportacao(im.qtdSucesso(), im.qtdIncomp(), user);
         } catch (IOException ex) {
             log.getLog().msgFalhaImpExportacao(ex.getMessage(), user);
             JOptionPane.showMessageDialog(view, ex.getMessage());
             Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (JDOMException ex) {
+            log.getLog().msgFalhaImpExportacao(ex.getMessage(), user);
+            JOptionPane.showMessageDialog(view, ex.getMessage());
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            log.getLog().msgFalhaImpExportacao(ex.getMessage(), user);
+            JOptionPane.showMessageDialog(view, ex.getMessage());
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
             log.getLog().msgFalhaImpExportacao(ex.getMessage(), user);
             JOptionPane.showMessageDialog(view, ex.getMessage());
             Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);

@@ -1,0 +1,78 @@
+
+CREATE TABLE `estado` (
+  `id` int(2) unsigned zerofill NOT NULL auto_increment,
+  `uf` varchar(10) NOT NULL default '',
+  `nome` varchar(20) NOT NULL default '',
+  `ddd` varchar(2) not null default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+
+
+INSERT INTO `estado` VALUES (01, 'AC', 'Acre', '68');
+INSERT INTO `estado` VALUES (02, 'AL', 'Alagoas', '82');
+INSERT INTO `estado` VALUES (03, 'AM', 'Amazonas', '92');
+INSERT INTO `estado` VALUES (04, 'AP', 'Amapá', '96');
+INSERT INTO `estado` VALUES (05, 'BA', 'Bahia', '71');
+INSERT INTO `estado` VALUES (06, 'CE', 'Ceará', '85');
+INSERT INTO `estado` VALUES (07, 'DF', 'Distrito Federal', '61');
+INSERT INTO `estado` VALUES (08, 'ES', 'Espírito Santo', '27');
+INSERT INTO `estado` VALUES (09, 'GO', 'Goiás', '62');
+INSERT INTO `estado` VALUES (10, 'MA', 'Maranhão', '98');
+INSERT INTO `estado` VALUES (11, 'MG', 'Minas Gerais', '31');
+INSERT INTO `estado` VALUES (12, 'MS', 'Mato Grosso do Sul'. '67');
+INSERT INTO `estado` VALUES (13, 'MT', 'Mato Grosso', '65');
+INSERT INTO `estado` VALUES (14, 'PA', 'Pará', '91');
+INSERT INTO `estado` VALUES (15, 'PB', 'Paraíba', '83');
+INSERT INTO `estado` VALUES (16, 'PE', 'Pernambuco', '81');
+INSERT INTO `estado` VALUES (17, 'PI', 'Piauí', '86');
+INSERT INTO `estado` VALUES (18, 'PR', 'Paraná', '41');
+INSERT INTO `estado` VALUES (19, 'RJ', 'Rio de Janeiro', '21');
+INSERT INTO `estado` VALUES (20, 'RN', 'Rio Grande do Norte', '84');
+INSERT INTO `estado` VALUES (21, 'RO', 'Rondônia', '69');
+INSERT INTO `estado` VALUES (22, 'RR', 'Roraima', '95');
+INSERT INTO `estado` VALUES (23, 'RS', 'Rio Grande do Sul', '51');
+INSERT INTO `estado` VALUES (24, 'SC', 'Santa Catarina', '47');
+INSERT INTO `estado` VALUES (25, 'SE', 'Sergipe', '79');
+INSERT INTO `estado` VALUES (26, 'SP', 'São Paulo', '11');
+INSERT INTO `estado` VALUES (27, 'TO', 'Tocantins'. '63');
+INSERT INTO `estado` VALUES (28, 'AM', 'Amazonas', '97');
+INSERT INTO `estado` VALUES (29, 'BA', 'Bahia', '73');
+INSERT INTO `estado` VALUES (30, 'BA', 'Bahia', '74');
+INSERT INTO `estado` VALUES (31, 'BA', 'Bahia', '75');
+INSERT INTO `estado` VALUES (32, 'BA', 'Bahia', '77');
+INSERT INTO `estado` VALUES (33, 'CE', 'Ceará', '88');
+INSERT INTO `estado` VALUES (34, 'ES', 'Espírito Santo', '28');
+INSERT INTO `estado` VALUES (35, 'GO', 'Goiás', '64');
+INSERT INTO `estado` VALUES (36, 'MA', 'Maranhão', '99');
+INSERT INTO `estado` VALUES (37, 'MG', 'Minas Gerais', '32');
+INSERT INTO `estado` VALUES (38, 'MG', 'Minas Gerais', '33');
+INSERT INTO `estado` VALUES (39, 'MG', 'Minas Gerais', '34');
+INSERT INTO `estado` VALUES (40, 'MG', 'Minas Gerais', '35');
+INSERT INTO `estado` VALUES (41, 'MG', 'Minas Gerais', '36');
+INSERT INTO `estado` VALUES (42, 'MG', 'Minas Gerais', '37');
+INSERT INTO `estado` VALUES (43, 'MG', 'Minas Gerais', '38');
+INSERT INTO `estado` VALUES (44, 'MT', 'Mato Grosso', '66');
+INSERT INTO `estado` VALUES (45, 'PA', 'Pará', '93');
+INSERT INTO `estado` VALUES (46, 'PA', 'Pará', '94');
+INSERT INTO `estado` VALUES (47, 'PE', 'Pernambuco', '87');
+INSERT INTO `estado` VALUES (48, 'PI', 'Piauí', '89');
+INSERT INTO `estado` VALUES (49, 'RJ', 'Rio de Janeiro', '22');
+INSERT INTO `estado` VALUES (50, 'RJ', 'Rio de Janeiro', '24');
+INSERT INTO `estado` VALUES (51, 'PR', 'Paraná', '42');
+INSERT INTO `estado` VALUES (52, 'PR', 'Paraná', '43');
+INSERT INTO `estado` VALUES (53, 'PR', 'Paraná', '44');
+INSERT INTO `estado` VALUES (54, 'PR', 'Paraná', '45');
+INSERT INTO `estado` VALUES (55, 'PR', 'Paraná', '46');
+INSERT INTO `estado` VALUES (56, 'RS', 'Rio Grande do Sul', '53');
+INSERT INTO `estado` VALUES (57, 'RS', 'Rio Grande do Sul', '54');
+INSERT INTO `estado` VALUES (58, 'RS', 'Rio Grande do Sul', '55');
+INSERT INTO `estado` VALUES (59, 'SC', 'Santa Catarina', '48');
+INSERT INTO `estado` VALUES (60, 'SC', 'Santa Catarina', '49');
+INSERT INTO `estado` VALUES (61, 'SP', 'São Paulo', '12');
+INSERT INTO `estado` VALUES (62, 'SP', 'São Paulo', '13');
+INSERT INTO `estado` VALUES (63, 'SP', 'São Paulo', '14');
+INSERT INTO `estado` VALUES (64, 'SP', 'São Paulo', '15');
+INSERT INTO `estado` VALUES (65, 'SP', 'São Paulo', '16');
+INSERT INTO `estado` VALUES (66, 'SP', 'São Paulo', '17');
+INSERT INTO `estado` VALUES (67, 'SP', 'São Paulo', '18');
+INSERT INTO `estado` VALUES (68, 'SP', 'São Paulo', '19');

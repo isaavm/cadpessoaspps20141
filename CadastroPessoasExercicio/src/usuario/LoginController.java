@@ -15,7 +15,10 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import model.Pessoa;
 import model.Usuario;
+import org.jdom2.JDOMException;
+import persistence.xml.ImportarContatosXML;
 import view.LoginView;
 
 /**
@@ -86,7 +89,7 @@ public class LoginController {
 
     public void sair() {
         view.dispose();
-        
+
     }
 
     public static void main(String[] args) {
@@ -102,6 +105,6 @@ public class LoginController {
     }
 
     private void criaAdm() {
-        new AdministradorController(dao,this);
+        new AdministradorController(dao, this);
     }
 }

@@ -29,16 +29,17 @@ public class PessoaDAO extends GenericDAO {
                     + p.getNome() + "\',\'" + p.getTelefone() + "\',\'"
                     + p.getUf() + "\',\'" + p.getOperadora() + "\')";
         } else if (p.getUf() != null) {
-            sql = "insert into Pessoa (nome,telefone,uf) values (\'"
+            sql = "insert into Pessoa (nome,telefone,uf,operadora) values (\'"
                     + p.getNome() + "\',\'" + p.getTelefone() + "\',\'"
-                    + p.getUf() + "\')";
+                    + p.getUf() + "\',\'\')";
         } else if (p.getOperadora() != null) {
-            sql = "insert into Pessoa (nome,telefone,operadora) values (\'"
-                    + p.getNome() + "\',\'" + p.getTelefone() + "\',\'"
-                    + p.getOperadora() + "\')";
+            sql = "insert into Pessoa (nome,telefone,uf,operadora) values (\'"
+                    + p.getNome() + "\',\'" + p.getTelefone() + "\',\'\',"
+                    + "\'" + p.getOperadora() + "\')";
         } else {
-            sql = "insert into Pessoa (nome,telefone) values (\'"
-                    + p.getNome() + "\',\'" + p.getTelefone() + "\')";
+            sql = "insert into Pessoa (nome,telefone,uf,operadora) values (\'"
+                    + p.getNome() + "\',\'" + p.getTelefone() + "\',"
+                    + "\'\',\'\')";
         }
 
         int r = s.executeUpdate(sql);
@@ -173,6 +174,156 @@ public class PessoaDAO extends GenericDAO {
             String op = rs.getString("operadora");
             String uf = rs.getString("uf");
             Pessoa p = new Pessoa(nome, telefone, uf, op);
+            ret.add(p);
+        }
+        desconectar();
+        return ret;
+    }
+
+    public List<Pessoa> getByUf(String filtro) throws SQLException, ClassNotFoundException {
+        List<Pessoa> ret = new ArrayList<Pessoa>();;
+        if (!filtro.equals("")) {
+            conectar();
+            ResultSet rs = s.executeQuery("select * from Pessoa where uf like \'%" + filtro + "%\'");
+            while (rs.next()) {
+                String nome = rs.getString("nome");
+                String telefone = rs.getString("telefone");
+                String op = rs.getString("operadora");
+                String uf = rs.getString("uf");
+                Pessoa p = new Pessoa(nome, telefone);
+                p.setOperadora(op);
+                p.setUf(uf);
+                ret.add(p);
+            }
+            desconectar();
+        } else {
+            ret = getPessoas();
+        }
+        return ret;
+    }
+
+    public List<Pessoa> getByOperadora(String filtro) throws SQLException, ClassNotFoundException {
+        List<Pessoa> ret = new ArrayList<Pessoa>();;
+        if (!filtro.equals("")) {
+            conectar();
+            ResultSet rs = s.executeQuery("select * from Pessoa where operadora like \'%" + filtro + "%\'");
+            while (rs.next()) {
+                String nome = rs.getString("nome");
+                String telefone = rs.getString("telefone");
+                String op = rs.getString("operadora");
+                String uf = rs.getString("uf");
+                Pessoa p = new Pessoa(nome, telefone);
+                p.setOperadora(op);
+                p.setUf(uf);
+                ret.add(p);
+            }
+            desconectar();
+        } else {
+            ret = getPessoas();
+        }
+        return ret;
+    }
+
+    public List<Pessoa> getByNomeInc(String filtro) throws SQLException, ClassNotFoundException {
+        List<Pessoa> ret = new ArrayList<Pessoa>();
+        if (!filtro.equals("")) {
+            conectar();
+            ResultSet rs = s.executeQuery("select * from Pessoa where nome like \'%" + filtro + "%\' and (uf = '' or operadora = '')");
+            while (rs.next()) {
+                String nome = rs.getString("nome");
+                String telefone = rs.getString("telefone");
+                String op = rs.getString("operadora");
+                String uf = rs.getString("uf");
+                Pessoa p = new Pessoa(nome, telefone);
+                p.setOperadora(op);
+                p.setUf(uf);
+                ret.add(p);
+            }
+            desconectar();
+        } else {
+            ret = getInconpletos();
+        }
+        return ret;
+    }
+
+    public List<Pessoa> getByTelefoneInc(String filtro) throws SQLException, ClassNotFoundException {
+        List<Pessoa> ret = new ArrayList<Pessoa>();
+        if (!filtro.equals("")) {
+            conectar();
+            ResultSet rs = s.executeQuery("select * from Pessoa where telefone like \'%" + filtro + "%\' and (uf = '' or operadora = '')");
+            while (rs.next()) {
+                String nome = rs.getString("nome");
+                String telefone = rs.getString("telefone");
+                String op = rs.getString("operadora");
+                String uf = rs.getString("uf");
+                Pessoa p = new Pessoa(nome, telefone);
+                p.setOperadora(op);
+                p.setUf(uf);
+                ret.add(p);
+            }
+            desconectar();
+        } else {
+            ret = getInconpletos();
+        }
+        return ret;
+    }
+
+    public List<Pessoa> getByUfInc(String filtro) throws SQLException, ClassNotFoundException {
+        List<Pessoa> ret = new ArrayList<Pessoa>();
+        if (!filtro.equals("")) {
+            conectar();
+            ResultSet rs = s.executeQuery("select * from Pessoa where uf like \'%" + filtro + "%\' and (uf = '' or operadora = '')");
+            while (rs.next()) {
+                String nome = rs.getString("nome");
+                String telefone = rs.getString("telefone");
+                String op = rs.getString("operadora");
+                String uf = rs.getString("uf");
+                Pessoa p = new Pessoa(nome, telefone);
+                p.setOperadora(op);
+                p.setUf(uf);
+                ret.add(p);
+            }
+            desconectar();
+        } else {
+            ret = getInconpletos();
+        }
+        return ret;
+    }
+
+    public List<Pessoa> getByOperadoraInc(String filtro) throws SQLException, ClassNotFoundException {
+        List<Pessoa> ret = new ArrayList<Pessoa>();
+        if (!filtro.equals("")) {
+            conectar();
+            ResultSet rs = s.executeQuery("select * from Pessoa where operadora like \'%" + filtro + "%\' and (uf = '' or operadora = '')");
+            while (rs.next()) {
+                String nome = rs.getString("nome");
+                String telefone = rs.getString("telefone");
+                String op = rs.getString("operadora");
+                String uf = rs.getString("uf");
+                Pessoa p = new Pessoa(nome, telefone);
+                p.setOperadora(op);
+                p.setUf(uf);
+                ret.add(p);
+            }
+            desconectar();
+        } else {
+            ret = getInconpletos();
+        }
+        return ret;
+    }
+
+    private List<Pessoa> getInconpletos() throws SQLException, ClassNotFoundException {
+        List<Pessoa> ret = new ArrayList<Pessoa>();
+        conectar();
+        ResultSet rs = s.executeQuery("select * from Pessoa where (uf = '' or operadora = '')");
+        while (rs.next()) {
+            String nome = rs.getString("nome");
+            String telefone = rs.getString("telefone");
+            String op = rs.getString("operadora");
+            String uf = rs.getString("uf");
+            Pessoa p = new Pessoa(nome, telefone);
+            p.setOperadora(op);
+            p.setUf(uf);
             ret.add(p);
         }
         desconectar();

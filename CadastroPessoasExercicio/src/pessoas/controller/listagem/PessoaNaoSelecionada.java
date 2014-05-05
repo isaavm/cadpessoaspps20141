@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import pessoas.controller.ListaPessoasController;
+import pessoas.controller.ListaPessoas;
 
 /**
  *
@@ -17,7 +17,7 @@ import pessoas.controller.ListaPessoasController;
  */
 public class PessoaNaoSelecionada extends EstadoFrameListagem {
 
-    public PessoaNaoSelecionada(ListaPessoasController c) {
+    public PessoaNaoSelecionada(ListaPessoas c) {
         super(c);
         c.setPessoa(null);
         c.getView().getBtnExcluir().setEnabled(false);
