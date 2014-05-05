@@ -1,0 +1,48 @@
+create database cadpessoas
+
+delimiter ;
+CREATE TABLE `banda` (
+  `idbanda` int(11) NOT NULL AUTO_INCREMENT,
+  `tipoBanda` varchar(45) NOT NULL,
+  PRIMARY KEY (`idbanda`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+delimiter ;
+CREATE TABLE `estado` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uf` varchar(10) NOT NULL DEFAULT '',
+  `nome` varchar(20) NOT NULL DEFAULT '',
+  `ddd` varchar(2) NOT NULL DEFAULT '',
+  `nonoDigito` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=69 DEFAULT CHARSET=latin1;
+
+delimiter ;
+CREATE TABLE `log` (
+  `idLog` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) NOT NULL,
+  PRIMARY KEY (`idLog`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+delimiter ;
+CREATE TABLE `pessoa` (
+  `idPessoa` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `telefone` varchar(45) NOT NULL,
+  `operadora` varchar(100) DEFAULT NULL,
+  `uf` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (`idPessoa`),
+  UNIQUE KEY `idPessoa_UNIQUE` (`idPessoa`),
+  UNIQUE KEY `nome_UNIQUE` (`nome`),
+  UNIQUE KEY `telefone_UNIQUE` (`telefone`)
+) ENGINE=InnoDB AUTO_INCREMENT=1014 DEFAULT CHARSET=latin1;
+
+delimiter ;
+CREATE TABLE `usuario` (
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(8) NOT NULL,
+  `senha` varchar(45) NOT NULL,
+  `adm` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`idUsuario`),
+  UNIQUE KEY `login_UNIQUE` (`login`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
