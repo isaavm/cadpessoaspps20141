@@ -25,6 +25,8 @@ public class EdicaoPessoa extends EstadoFrameInclusao {
         c.setNomeAntigo(c.getView().getTxtNome().getText());
         c.getView().getTxtNome().setEditable(true);
         c.getView().getTxtTelefone().setEditable(true);
+        c.getView().getCmOperadora().setEditable(true);
+        c.getView().getCbUf().setEditable(true);
         c.getView().setTitle("Editar contato");
         c.getView().getBtnFechar().setText("Cancelar");
         c.getView().getBtnSalvar().setText("Salvar");

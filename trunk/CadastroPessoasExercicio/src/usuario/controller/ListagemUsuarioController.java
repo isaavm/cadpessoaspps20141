@@ -99,14 +99,16 @@ public class ListagemUsuarioController {
     public void setEstado(EstadoFrameListagemUsuario estado) {
         this.estado = estado;
     }
-    
-    public void excluir() throws SQLException, ClassNotFoundException {
+
+    public void excluir() throws SQLException, ClassNotFoundException, Exception {
         int i = JOptionPane.showConfirmDialog(view, "Tem certeza que deseja excluir o registro?",
                 "Confirmar exclusão", JOptionPane.YES_NO_OPTION);
         if (i == JOptionPane.YES_OPTION) {
- 
+            if (usuario.isAdm()) {
+                throw new Exception("O usuário administrador não pode ser excluido!");
+            } else {
                 dao.excluir(usuario.getLogin());
-
+            }
         }
         estado.desselecionar();
     }
@@ -142,5 +144,5 @@ public class ListagemUsuarioController {
     public void setTm(DefaultTableModel tm) {
         this.tm = tm;
     }
-    
+
 }

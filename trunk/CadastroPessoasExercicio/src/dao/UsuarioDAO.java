@@ -108,7 +108,7 @@ public class UsuarioDAO extends GenericDAO {
 
     public void excluir(String login) throws SQLException, ClassNotFoundException {
         conectar();
-        int r = s.executeUpdate("delete from Usuario where nome like \'" + login + "\'");
+        int r = s.executeUpdate("delete from Usuario where login like \'" + login + "\'");
         desconectar();
         notifica();
 

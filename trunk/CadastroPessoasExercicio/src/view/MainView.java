@@ -18,10 +18,6 @@ public class MainView extends javax.swing.JFrame {
         return menuListar;
     }
 
-    public JMenuItem getMenuSair() {
-        return menuSair;
-    }
-
     public JMenuItem getMenuExportar() {
         return menuExportar;
     }
@@ -45,6 +41,10 @@ public class MainView extends javax.swing.JFrame {
     public JMenu getSuperMenuUsuario() {
         return superMenuUsuario;
     }
+
+    public JMenuItem getMenuContatoIncompleto() {
+        return menuContatoIncompleto;
+    }
     
     /** This method is called from within the constructor to
      * initialize the form.
@@ -59,10 +59,10 @@ public class MainView extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         menuImportar = new javax.swing.JMenuItem();
         menuExportar = new javax.swing.JMenuItem();
-        menuSair = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         menuAdd = new javax.swing.JMenuItem();
         menuListar = new javax.swing.JMenuItem();
+        menuContatoIncompleto = new javax.swing.JMenuItem();
         superMenuUsuario = new javax.swing.JMenu();
         menuAddUser = new javax.swing.JMenuItem();
         menuListaUser = new javax.swing.JMenuItem();
@@ -79,14 +79,6 @@ public class MainView extends javax.swing.JFrame {
 
         menuExportar.setText("Exportar contatos");
         jMenu2.add(menuExportar);
-
-        menuSair.setText("Sair");
-        menuSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuSairActionPerformed(evt);
-            }
-        });
-        jMenu2.add(menuSair);
 
         jMenuBar1.add(jMenu2);
 
@@ -112,6 +104,9 @@ public class MainView extends javax.swing.JFrame {
             }
         });
         jMenu1.add(menuListar);
+
+        menuContatoIncompleto.setText("Contatos incompletos");
+        jMenu1.add(menuContatoIncompleto);
 
         jMenuBar1.add(jMenu1);
 
@@ -161,9 +156,6 @@ public class MainView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_menuListarActionPerformed
 
-    private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
-    }//GEN-LAST:event_menuSairActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -171,12 +163,12 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem menuAdd;
     private javax.swing.JMenuItem menuAddUser;
+    private javax.swing.JMenuItem menuContatoIncompleto;
     private javax.swing.JMenuItem menuExportar;
     private javax.swing.JMenuItem menuImportar;
     private javax.swing.JMenuItem menuListaUser;
     private javax.swing.JMenuItem menuListar;
     private javax.swing.JMenuItem menuLog;
-    private javax.swing.JMenuItem menuSair;
     private javax.swing.JMenu superMenuUsuario;
     // End of variables declaration//GEN-END:variables
 

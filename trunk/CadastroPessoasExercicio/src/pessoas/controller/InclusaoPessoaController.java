@@ -1,5 +1,8 @@
 package pessoas.controller;
 
+import controller.IdentificaOperadoraController;
+import controller.IdentificaUfController;
+import controller.VerificaNonodigController;
 import java.io.IOException;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -8,6 +11,10 @@ import pessoas.controller.inclusao.EstadoFrameInclusao;
 import pessoas.controller.inclusao.InclusaoPessoa;
 import pessoas.controller.inclusao.VisualizacaoPessoa;
 import dao.PessoaDAO;
+import dao.UfDao;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.Usuario;
 import strategy.log.ILog;
 import view.InclusaoPessoaView;
@@ -29,6 +36,13 @@ public final class InclusaoPessoaController {
         this.pessoas = new PessoaDAO();
         this.instancia = inst;
         view = new InclusaoPessoaView();
+        try {
+            populaUfs();
+        } catch (SQLException ex) {
+            Logger.getLogger(InclusaoPessoaController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(InclusaoPessoaController.class.getName()).log(Level.SEVERE, null, ex);
+        }
         if (instancia == null) {
             estado = new InclusaoPessoa(this);;
         } else {
@@ -46,6 +60,9 @@ public final class InclusaoPessoaController {
         String telefone = (String) view.getTxtTelefone().getValue();
         if (isDadosValidos(nome, telefone)) {
             Pessoa p = new Pessoa(nome, telefone);
+            p.setOperadora(new IdentificaOperadoraController(p.getTelefone()).getOperadora());
+            p.setUf(new IdentificaUfController(p.getTelefone()).recuperaUf());
+            p = new VerificaNonodigController(p).executarVerificacao();
             if (!pessoas.add(p)) {
                 throw new Exception("Pessoa já existente");
             } else {
@@ -57,14 +74,19 @@ public final class InclusaoPessoaController {
         }
     }
 
-    public void editar() throws IOException, ClassNotFoundException, SQLException, Exception {
+    public void editar() throws IOException, ClassNotFoundException, SQLException {
         String nome = view.getTxtNome().getText();
         String telefone = (String) view.getTxtTelefone().getValue();
-        if (isDadosValidos(nome, telefone)) {
-            Pessoa p = new Pessoa(nome, telefone);
-            pessoas.editar(nomeAntigo, p);
-            this.instancia = p;
-            JOptionPane.showMessageDialog(view, "Editado com sucesso!");
+        try {
+            if (isDadosValidos(nome, telefone)) {
+                Pessoa p = new Pessoa(nome, telefone);
+                pessoas.editar(nomeAntigo, p);
+                this.instancia = p;
+                JOptionPane.showMessageDialog(view, "Editado com sucesso!");
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(view, ex.getMessage());
+            Logger.getLogger(InclusaoPessoaController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -73,11 +95,11 @@ public final class InclusaoPessoaController {
             if (nome.contains(" ")) {
                 return true;
             } else {
-                JOptionPane.showMessageDialog(view, "É necessário pelo menos um sobre nome para o caboco");
                 throw new Exception("É necessário pelo menos um sobre nome para o caboco");
             }
         } else {
-            throw new Exception("\"Você precisa informar os campos");
+            JOptionPane.showMessageDialog(view, "\"Você precisa informar os campos");
+            return false;
         }
     }
 
@@ -112,5 +134,13 @@ public final class InclusaoPessoaController {
     public void cancelarEdicao() throws ClassNotFoundException, SQLException {
         Pessoa aux = pessoas.getPessoaByName(nomeAntigo);
         instancia = aux;
+    }
+
+    private void populaUfs() throws SQLException, ClassNotFoundException {
+        List<String> uf = new UfDao().getUfs();
+        view.getCbUf().addItem("");
+        for (String u : uf) {
+            view.getCbUf().addItem(u);
+        }
     }
 }

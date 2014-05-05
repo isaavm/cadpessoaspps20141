@@ -17,10 +17,15 @@ public class VisualizacaoPessoa extends EstadoFrameInclusao {
 
     public VisualizacaoPessoa(InclusaoPessoaController c) {
         super(c);
+        
         c.getView().getTxtNome().setText(c.getInstancia().getNome());
         c.getView().getTxtTelefone().setText(c.getInstancia().getTelefone());
+        c.getView().getCmOperadora().setText(c.getInstancia().getOperadora());
+        c.getView().getCbUf().setSelectedItem(c.getInstancia().getUf().toUpperCase());
         c.getView().getTxtNome().setEditable(false);
         c.getView().getTxtTelefone().setEditable(false);
+        c.getView().getCmOperadora().setEditable(false);
+        c.getView().getCbUf().setEditable(false);
         c.getView().setTitle("Visualizar contato");
         c.getView().getBtnFechar().setText("Fechar");
         c.getView().getBtnSalvar().setText("Editar");

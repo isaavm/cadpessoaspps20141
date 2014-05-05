@@ -1,0 +1,140 @@
+<regras>
+	<registro>
+		<operadora>Tim</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>6340</bandaInicial>
+		<bandaFinal>6369</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Tim</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>7011</bandaInicial>
+		<bandaFinal>7051</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Tim</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>7950</bandaInicial>
+		<bandaFinal>7967</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Tim</operadora>
+		<ddd>51 52 53 54 55</ddd>
+		<bandaInicial>9911</bandaInicial>
+		<bandaFinal>9939</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Tim</operadora>
+		<ddd>81 82 83 84 85 86 87 88 89</ddd>
+		<bandaInicial>8719</bandaInicial>
+		<bandaFinal>8721</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Claro</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>6310</bandaInicial>
+		<bandaFinal>6339</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Claro</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>6589</bandaInicial>
+		<bandaFinal>6599</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Claro</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>6589</bandaInicial>
+		<bandaFinal>6599</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Claro</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>7052</bandaInicial>
+		<bandaFinal>7062</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Claro</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>8800</bandaInicial>
+		<bandaFinal>8899</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Claro</operadora>
+		<ddd>61 62 63 64 65 66 67 68 69</ddd>
+		<bandaInicial>9551</bandaInicial>
+		<bandaFinal>9559</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Claro</operadora>
+		<ddd>61 62 63 64 65 66 67 68 69</ddd>
+		<bandaInicial>9981</bandaInicial>
+		<bandaFinal>9989</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Vivo</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>6193</bandaInicial>
+		<bandaFinal>6370</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Vivo</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>6499</bandaInicial>
+		<bandaFinal>7099</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Vivo</operadora>
+		<ddd>81 82 83 84 85 86 87 88 89</ddd>
+		<bandaInicial>8100</bandaInicial>
+		<bandaFinal>8188</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Oi</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>6299</bandaInicial>
+		<bandaFinal>6299</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Oi</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>6651</bandaInicial>
+		<bandaFinal>6799</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Oi</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>7971</bandaInicial>
+		<bandaFinal>7999</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>Oi</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>8814</bandaInicial>
+		<bandaFinal>8899</bandaFinal>
+	</registro>
+	<registro>
+		<operadora>CTBR</operadora>
+		<ddd>31 32 33 34 35 36 37 38</ddd>
+		<bandaInicial>9960</bandaInicial>
+		<bandaFinal>9979</bandaFinal>
+	</registro>	
+	<registro>
+		<operadora>CTBR</operadora>
+		<ddd>31 32 33 34 35 36 37 38</ddd>
+		<bandaInicial>9991</bandaInicial>
+		<bandaFinal>9999</bandaFinal>
+	</registro>	
+	<registro>
+		<operadora>Sercomtel</operadora>
+		<ddd>41 42 43 44 45 46 47 48 49</ddd>
+		<bandaInicial>9941</bandaInicial>
+		<bandaFinal>9998</bandaFinal>
+	</registro>	
+	<registro>
+		<operadora>Unicel</operadora>
+		<ddd>11 12 13 14 15 16 17 18 19</ddd>
+		<bandaInicial>7900</bandaInicial>
+		<bandaFinal>7949</bandaFinal>
+	</registro>	
+</regras>

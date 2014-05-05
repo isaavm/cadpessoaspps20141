@@ -24,6 +24,10 @@ public class InclusaoPessoa extends EstadoFrameInclusao {
         super(c);
         c.getView().getTxtNome().setText("");
         c.getView().getTxtTelefone().setText("");
+        c.getView().getCbUf().setSelectedItem("");
+        c.getView().getCbUf().setEditable(false);
+        c.getView().getCmOperadora().setText("");
+        c.getView().getCmOperadora().setEditable(false);
         c.getView().setTitle("Incluir contato");
         c.getView().getBtnFechar().setText("Cancelar");
         c.getView().getBtnSalvar().setText("Salvar");

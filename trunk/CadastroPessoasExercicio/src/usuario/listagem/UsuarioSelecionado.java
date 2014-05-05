@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import usuario.controller.ListagemUsuarioController;
 
 /**
@@ -49,12 +50,14 @@ public class UsuarioSelecionado extends EstadoFrameListagemUsuario {
 
     @Override
     public void excluir() {
-
         try {
             c.excluir();
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioSelecionado.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
+            Logger.getLogger(UsuarioSelecionado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(c.getView(), ex.getMessage());
             Logger.getLogger(UsuarioSelecionado.class.getName()).log(Level.SEVERE, null, ex);
         }
         desselecionar();

@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import pessoas.controller.ListaPessoasController;
+import pessoas.controller.ListaPessoas;
 
 /**
  *
@@ -20,7 +20,7 @@ import pessoas.controller.ListaPessoasController;
  */
 public class PessoaSelecionada extends EstadoFrameListagem {
 
-    public PessoaSelecionada(ListaPessoasController c) throws ClassNotFoundException, SQLException {
+    public PessoaSelecionada(ListaPessoas c) throws ClassNotFoundException, SQLException {
         super(c);
         int linha = c.getView().getTabela().getSelectedRow();
         String nome = c.getView().getTabela().getValueAt(linha, 0).toString();

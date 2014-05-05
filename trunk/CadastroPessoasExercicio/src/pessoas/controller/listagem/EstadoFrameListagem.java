@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import pessoas.controller.ListaPessoas;
 import pessoas.controller.ListaPessoasController;
 
 /**
@@ -21,9 +22,9 @@ import pessoas.controller.ListaPessoasController;
  */
 public abstract class EstadoFrameListagem {
 
-    protected ListaPessoasController c;
+    protected ListaPessoas c;
 
-    public EstadoFrameListagem(ListaPessoasController c) {
+    public EstadoFrameListagem(ListaPessoas c) {
         this.c = c;
         limparListeners();
         c.setPessoa(null);
